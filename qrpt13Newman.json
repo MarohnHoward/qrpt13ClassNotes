@@ -1,0 +1,237 @@
+{
+	"info": {
+		"_postman_id": "ad78ccf4-16cf-44dc-a751-d5da87548fd2",
+		"name": "qrpt13-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8463932"
+	},
+	"item": [
+		{
+			"name": "https://pokeapi.co/api/v2/pokemon/rattata",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pokeapi.co/api/v2/pokemon/rattata",
+					"protocol": "https",
+					"host": [
+						"pokeapi",
+						"co"
+					],
+					"path": [
+						"api",
+						"v2",
+						"pokemon",
+						"rattata"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://www.amazon.com/s?k=dog+toys&crid=3978VGQAEEV7H&sprefix=stocking+stuffers%2Caps%2C138&ref=nb_sb_noss_2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.amazon.com/s?k=dog+toys&crid=3978VGQAEEV7H&sprefix=stocking+stuffers%2Caps%2C138&ref=nb_sb_noss_2",
+					"protocol": "https",
+					"host": [
+						"www",
+						"amazon",
+						"com"
+					],
+					"path": [
+						"s"
+					],
+					"query": [
+						{
+							"key": "k",
+							"value": "dog+toys"
+						},
+						{
+							"key": "crid",
+							"value": "3978VGQAEEV7H"
+						},
+						{
+							"key": "sprefix",
+							"value": "stocking+stuffers%2Caps%2C138"
+						},
+						{
+							"key": "ref",
+							"value": "nb_sb_noss_2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://swapi.devmountain.com/people",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Luke\");",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi.devmountain.com/people/1",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"devmountain",
+						"com"
+					],
+					"path": [
+						"people",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://recipes.devmountain.com/recipes/143?serves =2000",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n       \"type\": \"breakfast\",\n        \"recipe_name\": \"Oatmeal\",\n        \"image_url\": \"\",\n        \"prep_time\": \"0 \",\n        \"cook_time\": \"1 \",\n        \"serves\": \"1\",\n        \"instructions\": \"open our packet of oatmeal and dump contents in a bowl. fill the packet up to the fill line with water and add the water to the oatmeal make sure the oatmeal is cinnamon brown sugar microwave your oatmeal for 1 min and 30 seconds add brown sugar to your finished oatmeal and wait 45 minutes to cool down.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://recipes.devmountain.com/recipes/143?serves =2000",
+					"protocol": "https",
+					"host": [
+						"recipes",
+						"devmountain",
+						"com"
+					],
+					"path": [
+						"recipes",
+						"143"
+					],
+					"query": [
+						{
+							"key": "serves ",
+							"value": "2000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://recipes.devmountain.com/recipes/9",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://recipes.devmountain.com/recipes/9",
+					"protocol": "https",
+					"host": [
+						"recipes",
+						"devmountain",
+						"com"
+					],
+					"path": [
+						"recipes",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://recipes.devmountain.com/recipes/9?type =dinner",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://recipes.devmountain.com/recipes/9?type =dinner",
+					"protocol": "https",
+					"host": [
+						"recipes",
+						"devmountain",
+						"com"
+					],
+					"path": [
+						"recipes",
+						"9"
+					],
+					"query": [
+						{
+							"key": "instructions",
+							"value": "blah blahbklakjkl;kfjdklfjlskdjf",
+							"disabled": true
+						},
+						{
+							"key": "type ",
+							"value": "dinner"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://recipes.devmountain.com/recipes/9",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://recipes.devmountain.com/recipes/9",
+					"protocol": "https",
+					"host": [
+						"recipes",
+						"devmountain",
+						"com"
+					],
+					"path": [
+						"recipes",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{baseURL}}/pikachu",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/pikachu",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"pikachu"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
